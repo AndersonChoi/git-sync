@@ -21,8 +21,8 @@ make container REGISTRY=registry VERSION=tag
 docker run -d \
     -v /tmp/git-data:/git \
     registry/git-sync:tag \
-        --repo=https://github.com/kubernetes/git-sync
-        --branch=master
+        --repo=https://github.com/kubernetes/git-sync \
+        --branch=master \
         --interval=30
 
 # run an nginx container to serve the content
